@@ -17,9 +17,7 @@ export function loadUsing(deps, callback) {
 }
 
 export function initGadget() {
-   window.RLQ.push(function() {
-      mw.loader.using([ ...Dependencies ], function () {
-         Callbacks.forEach(cb => cb());
-      });
+   mw.loader.using([ ...Dependencies ], function () {
+      Callbacks.forEach(cb => cb());
    });
 }
