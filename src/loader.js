@@ -17,6 +17,10 @@ export function loadUsing(deps, callback) {
 }
 
 export function initGadget() {
+   // Check if article exists
+   if (mw.config.get('wgArticleId') === 0) {
+      return;
+   }
    mw.loader.using([ ...Dependencies ], function () {
       Callbacks.forEach(cb => cb());
    });
