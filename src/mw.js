@@ -24,7 +24,7 @@ async function getArticle(revId) {
 }
 
 export function getCurrentRevId() {
-   return mw.config.get('wgRevisionId');
+   return mw.config.get('wgCurRevisionId');
 }
 
 export async function getArticleSize(revId) {
